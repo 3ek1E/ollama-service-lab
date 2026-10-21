@@ -1,0 +1,205 @@
+{
+  "checked_at": "2026-10-21T15:25:05.024951+08:00",
+  "public_url": "https://missing-star-maternity-ranch.trycloudflare.com",
+  "checks": [
+    {
+      "name": "public_reject_missing_key",
+      "passed": true,
+      "result": {
+        "http_status": 401
+      }
+    },
+    {
+      "name": "public_ollama_sync",
+      "passed": true,
+      "result": {
+        "api": "ollama",
+        "http_status": 200,
+        "seconds": 1.283,
+        "text": "1+1 等于 2。",
+        "raw": {
+          "model": "qwen3.5:0.8b",
+          "created_at": "2026-10-21T07:25:07.6558756Z",
+          "message": {
+            "role": "assistant",
+            "content": "1+1 等于 2。"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 239624300,
+          "load_duration": 12307800,
+          "prompt_eval_count": 23,
+          "prompt_eval_cached_count": 19,
+          "prompt_eval_duration": 41739000,
+          "eval_count": 9,
+          "eval_duration": 163517000
+        }
+      }
+    },
+    {
+      "name": "public_chat_sync",
+      "passed": true,
+      "result": {
+        "api": "chat",
+        "http_status": 200,
+        "seconds": 1.151,
+        "text": "1+1 等于 2。",
+        "raw": {
+          "id": "chatcmpl-28",
+          "object": "chat.completion",
+          "created": 1792567508,
+          "model": "qwen3.5:0.8b",
+          "system_fingerprint": "fp_ollama",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "1+1 等于 2。"
+              },
+              "finish_reason": "stop"
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 23,
+            "prompt_tokens_details": {
+              "cached_tokens": 19
+            },
+            "completion_tokens": 9,
+            "total_tokens": 32
+          }
+        }
+      }
+    },
+    {
+      "name": "public_responses_sync",
+      "passed": true,
+      "result": {
+        "api": "responses",
+        "http_status": 200,
+        "seconds": 1.197,
+        "text": "1+1 等于 2。",
+        "raw": {
+          "id": "resp_653316",
+          "object": "response",
+          "created_at": 1792567510,
+          "completed_at": 1792567510,
+          "status": "completed",
+          "incomplete_details": null,
+          "model": "qwen3.5:0.8b",
+          "previous_response_id": null,
+          "instructions": null,
+          "output": [
+            {
+              "id": "msg_437395",
+              "type": "message",
+              "status": "completed",
+              "role": "assistant",
+              "content": [
+                {
+                  "type": "output_text",
+                  "text": "1+1 等于 2。",
+                  "annotations": [],
+                  "logprobs": []
+                }
+              ]
+            }
+          ],
+          "error": null,
+          "tools": [],
+          "tool_choice": "auto",
+          "truncation": "disabled",
+          "parallel_tool_calls": true,
+          "text": {
+            "format": {
+              "type": "text"
+            }
+          },
+          "top_p": 1,
+          "presence_penalty": 0,
+          "frequency_penalty": 0,
+          "top_logprobs": 0,
+          "temperature": 0,
+          "reasoning": null,
+          "usage": {
+            "input_tokens": 23,
+            "output_tokens": 9,
+            "total_tokens": 32,
+            "input_tokens_details": {
+              "cached_tokens": 19
+            },
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "max_output_tokens": 128,
+          "max_tool_calls": null,
+          "store": false,
+          "background": false,
+          "service_tier": "default",
+          "metadata": {},
+          "safety_identifier": null,
+          "prompt_cache_key": null
+        }
+      }
+    },
+    {
+      "name": "public_anthropic_sync",
+      "passed": true,
+      "result": {
+        "api": "anthropic",
+        "http_status": 200,
+        "seconds": 1.182,
+        "text": "1+1 等于 2。",
+        "raw": {
+          "id": "msg_de0020f1c061b4997ef7dcf5",
+          "type": "message",
+          "role": "assistant",
+          "model": "qwen3.5:0.8b",
+          "content": [
+            {
+              "type": "text",
+              "text": "1+1 等于 2。"
+            }
+          ],
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 4,
+            "cache_read_input_tokens": 19,
+            "output_tokens": 9
+          }
+        }
+      }
+    },
+    {
+      "name": "lan_self_address",
+      "passed": true,
+      "result": {
+        "api": "ollama",
+        "http_status": 200,
+        "seconds": 0.259,
+        "text": "1+1 等于 2。",
+        "raw": {
+          "model": "qwen3.5:0.8b",
+          "created_at": "2026-10-21T07:25:11.8696064Z",
+          "message": {
+            "role": "assistant",
+            "content": "1+1 等于 2。"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 226996200,
+          "load_duration": 13534500,
+          "prompt_eval_count": 22,
+          "prompt_eval_cached_count": 18,
+          "prompt_eval_duration": 38678000,
+          "eval_count": 9,
+          "eval_duration": 153857000
+        }
+      }
+    }
+  ],
+  "public_streaming": "Not tested: Quick Tunnels officially do not support SSE",
+  "lan_scope": "Server accessing own LAN IP only; no second device was available",
+  "passed": true
+}

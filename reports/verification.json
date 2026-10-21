@@ -1,0 +1,326 @@
+{
+  "checked_at": "2026-10-21T15:24:59.076824+08:00",
+  "model": "qwen3.5:0.8b",
+  "target": "http://127.0.0.1:8088",
+  "checks": [
+    {
+      "name": "health",
+      "passed": true,
+      "result": {
+        "status": "gateway-alive",
+        "readiness": "/api/tags (authenticated)"
+      }
+    },
+    {
+      "name": "reject_missing_key",
+      "passed": true,
+      "result": {
+        "http_status": 401
+      }
+    },
+    {
+      "name": "deny_model_management",
+      "passed": true,
+      "result": {
+        "http_status": 404
+      }
+    },
+    {
+      "name": "reject_invalid_json",
+      "passed": true,
+      "result": {
+        "http_status": 400
+      }
+    },
+    {
+      "name": "reject_unapproved_model",
+      "passed": true,
+      "result": {
+        "http_status": 400
+      }
+    },
+    {
+      "name": "ollama_version",
+      "passed": true,
+      "result": {
+        "version": "0.40.6"
+      }
+    },
+    {
+      "name": "downloaded_models",
+      "passed": true,
+      "result": {
+        "models": [
+          {
+            "name": "qwen3.5:0.8b",
+            "model": "qwen3.5:0.8b",
+            "modified_at": "2026-10-21T15:24:57.6060646+08:00",
+            "size": 1322069277,
+            "digest": "de63045f29755d4721c09d54c9b45c2dadb644f4fd7d604d4cac90d96049971c",
+            "details": {
+              "parent_model": "qwen35-validation-20260930:0.8b-stock-q8_0-q8draft2",
+              "format": "gguf",
+              "family": "qwen35",
+              "families": [
+                "qwen35"
+              ],
+              "parameter_size": "752.39M",
+              "quantization_level": "Q8_0",
+              "context_length": 262144,
+              "embedding_length": 1024,
+              "runner": "llamacpp"
+            },
+            "capabilities": [
+              "completion",
+              "vision",
+              "tools",
+              "thinking"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "ollama_sync",
+      "passed": true,
+      "result": {
+        "api": "ollama",
+        "http_status": 200,
+        "seconds": 0.269,
+        "text": "1+1 等于 2。",
+        "raw": {
+          "model": "qwen3.5:0.8b",
+          "created_at": "2026-10-21T07:24:59.5364079Z",
+          "message": {
+            "role": "assistant",
+            "content": "1+1 等于 2。"
+          },
+          "done": true,
+          "done_reason": "stop",
+          "total_duration": 236122000,
+          "load_duration": 15353500,
+          "prompt_eval_count": 23,
+          "prompt_eval_cached_count": 19,
+          "prompt_eval_duration": 38762000,
+          "eval_count": 9,
+          "eval_duration": 155385000
+        }
+      }
+    },
+    {
+      "name": "chat_sync",
+      "passed": true,
+      "result": {
+        "api": "chat",
+        "http_status": 200,
+        "seconds": 0.24,
+        "text": "1+1 等于 2。",
+        "raw": {
+          "id": "chatcmpl-17",
+          "object": "chat.completion",
+          "created": 1792567499,
+          "model": "qwen3.5:0.8b",
+          "system_fingerprint": "fp_ollama",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "1+1 等于 2。"
+              },
+              "finish_reason": "stop"
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 23,
+            "prompt_tokens_details": {
+              "cached_tokens": 19
+            },
+            "completion_tokens": 9,
+            "total_tokens": 32
+          }
+        }
+      }
+    },
+    {
+      "name": "responses_sync",
+      "passed": true,
+      "result": {
+        "api": "responses",
+        "http_status": 200,
+        "seconds": 0.249,
+        "text": "1+1 等于 2。",
+        "raw": {
+          "id": "resp_99418",
+          "object": "response",
+          "created_at": 1792567500,
+          "completed_at": 1792567500,
+          "status": "completed",
+          "incomplete_details": null,
+          "model": "qwen3.5:0.8b",
+          "previous_response_id": null,
+          "instructions": null,
+          "output": [
+            {
+              "id": "msg_528846",
+              "type": "message",
+              "status": "completed",
+              "role": "assistant",
+              "content": [
+                {
+                  "type": "output_text",
+                  "text": "1+1 等于 2。",
+                  "annotations": [],
+                  "logprobs": []
+                }
+              ]
+            }
+          ],
+          "error": null,
+          "tools": [],
+          "tool_choice": "auto",
+          "truncation": "disabled",
+          "parallel_tool_calls": true,
+          "text": {
+            "format": {
+              "type": "text"
+            }
+          },
+          "top_p": 1,
+          "presence_penalty": 0,
+          "frequency_penalty": 0,
+          "top_logprobs": 0,
+          "temperature": 0,
+          "reasoning": null,
+          "usage": {
+            "input_tokens": 23,
+            "output_tokens": 9,
+            "total_tokens": 32,
+            "input_tokens_details": {
+              "cached_tokens": 19
+            },
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "max_output_tokens": 128,
+          "max_tool_calls": null,
+          "store": false,
+          "background": false,
+          "service_tier": "default",
+          "metadata": {},
+          "safety_identifier": null,
+          "prompt_cache_key": null
+        }
+      }
+    },
+    {
+      "name": "anthropic_sync",
+      "passed": true,
+      "result": {
+        "api": "anthropic",
+        "http_status": 200,
+        "seconds": 0.226,
+        "text": "1+1 等于 2。",
+        "raw": {
+          "id": "msg_da34d2d92640d0f99e159302",
+          "type": "message",
+          "role": "assistant",
+          "model": "qwen3.5:0.8b",
+          "content": [
+            {
+              "type": "text",
+              "text": "1+1 等于 2。"
+            }
+          ],
+          "stop_reason": "end_turn",
+          "usage": {
+            "input_tokens": 4,
+            "cache_read_input_tokens": 19,
+            "output_tokens": 9
+          }
+        }
+      }
+    },
+    {
+      "name": "ollama_stream",
+      "passed": true,
+      "result": {
+        "api": "ollama",
+        "http_status": 200,
+        "seconds": 0.227,
+        "stream": true,
+        "events": 7,
+        "text": "1+1 等于 2。"
+      }
+    },
+    {
+      "name": "chat_stream",
+      "passed": true,
+      "result": {
+        "api": "chat",
+        "http_status": 200,
+        "seconds": 0.225,
+        "stream": true,
+        "events": 7,
+        "text": "1+1 等于 2。"
+      }
+    },
+    {
+      "name": "responses_stream",
+      "passed": true,
+      "result": {
+        "api": "responses",
+        "http_status": 200,
+        "seconds": 0.238,
+        "stream": true,
+        "events": 14,
+        "text": "1+1 等于 2。"
+      }
+    },
+    {
+      "name": "anthropic_stream",
+      "passed": true,
+      "result": {
+        "api": "anthropic",
+        "http_status": 200,
+        "seconds": 0.235,
+        "stream": true,
+        "events": 11,
+        "text": "1+1 等于 2。"
+      }
+    },
+    {
+      "name": "tool_call_round_trip",
+      "passed": true,
+      "result": {
+        "answer": "结果是 4053。",
+        "tools_executed": 1,
+        "trace": [
+          {
+            "tool": "calculate",
+            "arguments": {
+              "expression": "(123+456)*7"
+            },
+            "result": {
+              "value": 4053
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "rag_retrieval_and_generation",
+      "passed": true,
+      "result": {
+        "answer": "根据提供的资料，模型服务网关的配置如下：\n\n*   **端口**：默认使用 **8088** 端口。\n*   **认证方式**：采用 **Authorization: Bearer** 访问密钥进行认证；兼容 Anthropic 的 `x-api-key` 请求头。",
+        "sources": [
+          "service.md",
+          "extensions.md"
+        ],
+        "retrieval": "Chinese bigram overlap (not vector search)"
+      }
+    }
+  ],
+  "passed": true
+}

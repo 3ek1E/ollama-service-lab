@@ -1,0 +1,7 @@
+# Replace model.example.com with a domain pointing to your server.
+# Run gateway on loopback; Caddy handles public TLS on ports 80/443.
+model.example.com {
+    reverse_proxy 127.0.0.1:8088 {
+        flush_interval -1
+    }
+}
